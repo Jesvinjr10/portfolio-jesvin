@@ -1,0 +1,126 @@
+/* Custom styles for PortfolioNavbar */
+.navbar-animate {
+    background-color: #1A3636; /* Slightly transparent navbar */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.brand-animate {
+    font-family: 'Lobster', cursive; /* Unique font for brand */
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.brand-animate:hover {
+    transform: scale(1.1); /* Scale up brand name slightly on hover */
+}
+
+.toggle-animate {
+    border: none;
+}
+
+.toggle-animate:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-link-animate {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    color: white !important;
+    position: relative;
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link-animate::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #f1f1f1; 
+    transition: width 0.3s ease;
+}
+
+.nav-link-animate:hover::after {
+    width: 100%; 
+}
+
+.nav-link-animate:hover {
+    color: #FF8A8A !important; 
+    transform: translateY(-2px); 
+}
+
+.icon {
+    font-size: 1.2rem; 
+}
+
+.nav-link-animate:hover .icon {
+    transform: rotate(10deg); 
+    transition: transform 0.3s ease;
+}
+
+/* Animation for brand and nav elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brand-animate {
+    animation: fadeIn 1s ease-out;
+}
+
+.nav-link-animate {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Add hover effects to icons */
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: rotate(360deg); /* Rotate icon on hover */
+    transition: transform 0.6s ease;
+}
+
+@media (max-width: 992px) {
+    .navbar-animate {
+        background-color: rgba(0, 0, 0, 0.95); /* Darker background on mobile */
+    }
+
+    .nav-link-animate {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+.profile-pic {
+    border: 2px solid #fff; /* Optional: Add a white border around the profile pic */
+  }
+  
+  .brand-text {
+    font-size: 20px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Make the text bold */
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-animate {
+      background-color: #1A3636; /* Repeat the color for clarity on mobile */
+    }
+  
+    /* Adjust text or icon sizes if needed for mobile */
+    .navbar-animate .nav-link-animate {
+      font-size: 14px; /* Smaller font size on mobile */
+    }
+  }

@@ -1,0 +1,72 @@
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px; /* Adjusted padding for better spacing */
+}
+
+.card {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 300px; /* Maximum width for larger screens */
+  height: 300px; /* Fixed height */
+  perspective: 1000px; /* Gives a 3D perspective */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Flips the card */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%; /* Use full width of card */
+  height: 100%; /* Use full height of card */
+  backface-visibility: hidden; /* Hides the back when the front is visible */
+  display: flex; /* Center content */
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background-color: #fff; /* Front background color */
+}
+
+.card-back {
+  flex-direction: column; /* Stack content vertically */
+  background-color: #A5DD9B; /* Background color for the back */
+  color: #fff; /* Text color for the back */
+  transform: rotateY(180deg); /* Starts hidden */
+  padding: 10px; /* Reduced padding for better spacing */
+  box-sizing: border-box; /* Ensures padding is included in total height */
+}
+
+.logo {
+  max-width: 80%; /* Adjust logo size */
+  max-height: 80%; /* Adjust logo size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 180px; /* Further adjust height for extra small screens */
+  }
+
+  .card-back {
+    font-size: 0.8em; /* Smaller font size for smaller screens */
+  }
+}
