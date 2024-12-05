@@ -51,7 +51,7 @@
 }
 
 .nav-link-animate:hover {
-    color: #FF8A8A !important; 
+    color: #ff0101 !important; 
     transform: translateY(-2px); 
 }
 

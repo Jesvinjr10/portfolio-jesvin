@@ -6,7 +6,7 @@ import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaTools } from 'react-ico
 
 const PortfolioNavbar = () => {
   return (
-    <BootstrapNavbar expand="lg" fixed="top" className="navbar-animate">
+    <BootstrapNavbar expand="md" fixed="top" className="navbar-animate">
       <BootstrapNavbar.Brand className="d-flex align-items-center" style={{ marginLeft: '20px' }}>
         <img
           src={profilePic}

@@ -33,6 +33,7 @@ h2 {
 
 .card-body h4 {
   transition: color 0.3s ease;
+
 }
 
 .card:hover .card-body h4 {

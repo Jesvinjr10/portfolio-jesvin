@@ -1,59 +1,55 @@
 import React from "react";
+import logo from "../assets/backhome.jpg"; // Correct path to the image
 import "./project-section.css";
-// Import your project images here
-// import logo from "../projectphotos/userdata.png";
-// import logo2 from "../projectphotos/ajax.png";
-// import logo3 from "../projectphotos/studentidcard.png";
 
 const Projects = () => {
   const projects = [
     {
       title: "USERDATA",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus cumque magnam consequatur illum blanditiis nihil.",
-      // logo: logo,
-      color: "#A5DD9B",
+        "This project demonstrates fetching and displaying user data dynamically.",
+      image: logo,
+      link: "#",
     },
     {
-      title: "DATA FROM API USING AJAX",
+      title: "API USING AJAX",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus cumque magnam consequatur illum blanditiis nihil.",
-      // logo: logo2,
-      color: "#A5DD9B",
+        "Fetching data from an API using AJAX for seamless web experience.",
+      image: logo,
+      link: "#",
     },
     {
       title: "STUDENT ID CARD",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus cumque magnam consequatur illum blanditiis nihil.",
-      // logo: logo3,
-      color: "#A5DD9B",
+      description: "A project for creating digital student ID cards.",
+      image: logo,
+      link: "#",
     },
     {
-      title: "ANOTHER PROJECT",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus cumque magnam consequatur illum blanditiis nihil.",
-      // logo: logo3,
-      color: "#A5DD9B",
+      title: "UI/UX DESIGN PROJECT",
+      description: "An innovative UI/UX design project.",
+      image: logo,
+      link: "#",
     },
   ];
 
   return (
-    <div id="projects" className="py-1">
-      <div className="project-section">
+    <div className="container-fluid py-5" style={{ backgroundColor: "#40534C" }}>
+      <h2 className="text-center text-light mb-4">My Projects</h2>
+      <div className="row">
         {projects.map((project, index) => (
-          <div className="card" key={index}>
-            <div className="card-inner">
-              <div className="card-front">
-                <img
-                  src={project.logo}
-                  alt={`${project.title} Logo`}
-                  className="logo"
-                />
-              </div>
-              <div className="card-back" style={{ backgroundColor: project.color }}>
-                <h2 className="text-dark">{project.title}</h2>
-                <p className="text-dark">{project.description}</p>
-                <a href="null">VIEW MY PROJECT</a>
+          <div className="col-md-6 col-lg-4 mb-4" key={index}>
+            <div className="card h-100 shadow-sm">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h5 className="card-title">{project.title}</h5>
+                <p className="card-text">{project.description}</p>
+                <a href={project.link} className="btn btn-primary">
+                  View Project
+                </a>
               </div>
             </div>
           </div>

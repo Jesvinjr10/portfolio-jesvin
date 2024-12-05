@@ -10,7 +10,7 @@ const Skills = () => {
         <div className="row">
           {/* Skill Card */}
           <div className="col-md-4">
-            <div className="card animate__animated animate__fadeInLeft animate__delay-1s" style={{ backgroundColor: '#1A3636', color: '#D6BD98' }}>
+            <div className="card animate__animated animate__fadeInLeft animate__delay-1s" style={{ backgroundColor: '#1A3636', color: '#D6BD98',  borderRadius:'6px 6px 6px 6px'}}>
               <div className="card-body">
                 <h4 className="card-title">REACT JS</h4>
               </div>
@@ -96,6 +96,27 @@ const Skills = () => {
             <div className="card animate__animated animate__fadeInLeft animate__delay-3s" style={{ backgroundColor: '#1A3636', color: '#D6BD98' }}>
               <div className="card-body">
                 <h4 className="card-title">REDUX</h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card animate__animated animate__fadeInLeft animate__delay-3s" style={{ backgroundColor: '#1A3636', color: '#D6BD98' }}>
+              <div className="card-body">
+                <h4 className="card-title">AXIOS</h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card animate__animated animate__fadeInLeft animate__delay-3s" style={{ backgroundColor: '#1A3636', color: '#D6BD98' }}>
+              <div className="card-body">
+                <h4 className="card-title">HOOKS</h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card animate__animated animate__fadeInLeft animate__delay-3s" style={{ backgroundColor: '#1A3636', color: '#D6BD98' }}>
+              <div className="card-body">
+                <h4 className="card-title">ROUTER</h4>
               </div>
             </div>
           </div>
