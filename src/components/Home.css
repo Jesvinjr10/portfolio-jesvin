@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../assets/back222.jpg') no-repeat center center/cover;
+  background: url('../assets/homeBack1.jpg') no-repeat center center/cover;
   margin-top: 70px;
 }
 
@@ -52,7 +52,7 @@ h1, p {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 14rem;
   }
 
   p {
